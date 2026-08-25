@@ -7,6 +7,7 @@ from dataclasses import dataclass, field
 
 KNOWN_AI_USER_AGENTS = (
     "OAI-SearchBot",
+    "OAI-AdsBot",
     "GPTBot",
     "ChatGPT-User",
     "Claude-SearchBot",

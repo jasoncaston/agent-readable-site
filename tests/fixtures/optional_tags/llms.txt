@@ -1,0 +1,7 @@
+# Fictional Observatory Services
+
+> Public observing sessions for schools and community groups.
+
+## Pages
+
+- [Services](https://fictional-observatory.example/services): Details about public observing sessions.

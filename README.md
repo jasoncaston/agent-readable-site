@@ -92,17 +92,19 @@ Crawler access facts:
 
 The complete report lists every maintained user-agent token. The short example keeps the focus on the score and defect format.
 
+That 100/100 is a purpose-built fixture, not a normal target. In a calibration pass, measured real sites landed between 20 and 65. The top of that band was the site that publishes the llms.txt convention itself. I'm keeping this as a band so individual site scores do not go stale.
+
 ## How the score works
 
 I need to be straight about the score. I chose these weights. They are useful because every point maps to an observable condition, but they are not a study of ranking or citation outcomes.
 
 | Check | Points | Why it carries that weight |
 |---|---:|---|
-| llms.txt presence and conformance | 20 | The file is the convention this toolkit is built to inspect. Presence earns 8 points. Valid structure earns the remaining 12. |
+| llms.txt presence and conformance | 20 | This is a bet, not a measured outcome. llms.txt is the only artifact here authored specifically for machine consumption. If you think the convention will not stick, subtract 20 and read the remaining 80. Presence earns 8 points. Valid structure earns the remaining 12. |
 | Parseable JSON-LD | 15 | Structured data gives machines explicit entities and types, but it cannot replace readable page text. |
-| Complete Organization or Person entity | 15 | A named entity with a URL and description answers who the page represents. |
+| Complete Organization or Person entity | 15 | This is worth more than canonical because it records who the page represents with a name, URL, and description. It is worth less than llms.txt because it is not the dedicated machine-consumption artifact this score is betting on. |
 | Primary claims in visible text | 15 | A claim trapped in pixels is harder to inspect, quote, and verify from HTML. |
-| Descriptive heading structure | 10 | H1 and H2 text provides a compact map of the page when the labels describe the content. |
+| Descriptive heading structure | 10 | This is worth more than canonical because H1 and H2 text maps the page's content. It is worth less than llms.txt because headings are one layer of page clarity, not an artifact written specifically for machines. |
 | Substantive title | 10 | The title is the shortest stable label for the page. The check requires at least 12 characters and two words. |
 | Substantive meta description | 10 | The description supplies a concise page summary. The check requires at least 50 characters and eight words. |
 | Canonical URL | 5 | Canonical identity matters, but it should not outweigh readable claims or entity data. |
@@ -121,7 +123,7 @@ The `templates/` directory contains filled-in JSON-LD examples for Organization,
 
 ## Check the convention
 
-I implemented the llms.txt structure from [the llms.txt v2 proposal](https://llmstxt.org/). The crawler-token list is grounded in current documentation from [OpenAI](https://developers.openai.com/api/docs/bots), [Anthropic](https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler), [Google](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers), and [Perplexity](https://docs.perplexity.ai/docs/resources/perplexity-crawlers). Those providers can change their tokens and policies. Treat this list as inspectable code, not permanent truth.
+I implemented the llms.txt structure from [the llms.txt v2 proposal](https://llmstxt.org/). The crawler-token list is grounded in current documentation from [OpenAI](https://developers.openai.com/api/docs/bots), [Anthropic](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler), [Google](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers), and [Perplexity](https://docs.perplexity.ai/docs/resources/perplexity-crawlers). Those providers can change their tokens and policies. Treat this list as inspectable code, not permanent truth.
 
 ## License
 

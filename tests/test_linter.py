@@ -29,6 +29,26 @@ def test_clean_site_reports_parsed_values() -> None:
     assert report.scoring["visible_claims"].awarded == 15
 
 
+def test_valid_html5_without_html_tag_is_inspected() -> None:
+    report = inspect_site(fixture_url("optional_tags"))
+
+    assert report.score == 100
+    assert report.defects == []
+    assert report.schema_types == ["Organization"]
+    assert report.scoring["headings"].awarded == 10
+    assert report.scoring["visible_claims"].awarded == 15
+
+
+def test_text_without_recognized_html_fails_loud(tmp_path) -> None:
+    page = tmp_path / "index.html"
+    page.write_text("This is text, but it is not recognizable HTML.", encoding="utf-8")
+
+    with pytest.raises(InspectionError) as caught:
+        inspect_site(page.as_uri())
+
+    assert str(caught.value) == f"could not parse recognizable HTML, so no score was produced: {page.as_uri()}"
+
+
 def test_missing_llms_txt_names_the_specific_gap() -> None:
     report = inspect_site(fixture_url("missing_llms"))
 

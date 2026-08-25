@@ -13,4 +13,5 @@ Disallow: /
 
     assert facts["GPTBot"]["status"] == "blocked"
     assert facts["GPTBot"]["disallow"] == ["/"]
+    assert facts["OAI-AdsBot"]["status"] == "allowed"
     assert facts["OAI-SearchBot"]["status"] == "allowed"

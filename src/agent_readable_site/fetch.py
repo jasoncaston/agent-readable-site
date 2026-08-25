@@ -9,6 +9,8 @@ from urllib.request import Request, urlopen
 
 
 USER_AGENT = "agent-readable-site/0.1 (+https://llmstxt.org/)"
+REDIRECT_STATUS_CODES = {301, 302, 303, 307, 308}
+REDIRECT_LOOP_MARKERS = ("infinite loop", "redirect loop", "too many redirects")
 
 
 class FetchFailure(RuntimeError):
@@ -46,6 +48,9 @@ def fetch_text(url: str, timeout: float = 10.0) -> str:
     except HTTPError as exc:
         if exc.code == 404:
             raise ResourceMissing(f"resource not found: {url}") from exc
+        reason = str(exc.reason).lower()
+        if exc.code in REDIRECT_STATUS_CODES and any(marker in reason for marker in REDIRECT_LOOP_MARKERS):
+            raise FetchFailure(f"redirect loop detected for {url}: too many redirects") from exc
         raise FetchFailure(f"fetch failed for {url}: HTTP {exc.code}") from exc
     except (URLError, OSError, TimeoutError) as exc:
         raise FetchFailure(f"fetch failed for {url}: {exc}") from exc
