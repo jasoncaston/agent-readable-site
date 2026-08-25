@@ -92,7 +92,7 @@ Crawler access facts:
 
 The complete report lists every maintained user-agent token. The short example keeps the focus on the score and defect format.
 
-That 100/100 is a purpose-built fixture, not a normal target. In a calibration pass, measured real sites landed between 20 and 65. The top of that band was the site that publishes the llms.txt convention itself. I'm keeping this as a band so individual site scores do not go stale.
+That 100/100 is a purpose-built fixture, not a normal target. In a calibration pass, measured real sites landed between 15 and 65. The top of that band was the site that publishes the llms.txt convention itself. I'm keeping this as a band so individual site scores do not go stale.
 
 ## How the score works
 
