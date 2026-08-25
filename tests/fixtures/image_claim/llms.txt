@@ -1,0 +1,7 @@
+# Northstar Lantern Display
+
+> A fictional page used to test a claim trapped in an image.
+
+## Pages
+
+- [Display](https://northstar-lantern.example/display): Image-claim test page

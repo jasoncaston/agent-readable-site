@@ -1,0 +1,7 @@
+# Northstar Lantern Notes
+
+> Fictional workshop notes about imaginary lantern projects.
+
+## Pages
+
+- [Workshop notes](https://northstar-lantern.example/notes): Materials and maintenance assumptions

@@ -1,0 +1,13 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why fictional lanterns need ventilation",
+  "url": "https://northstar-lantern.example/articles/lantern-ventilation",
+  "description": "A fictional article explaining ventilation in a paper lantern demonstration.",
+  "datePublished": "2026-01-15",
+  "author": {
+    "@type": "Person",
+    "name": "Avery Rowan",
+    "url": "https://northstar-lantern.example/team/avery-rowan"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Avery Rowan",
+  "url": "https://northstar-lantern.example/team/avery-rowan",
+  "description": "A fictional lantern designer and workshop instructor.",
+  "jobTitle": "Lead lantern designer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Northstar Lantern Works"
+  }
+}

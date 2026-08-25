@@ -1,0 +1,7 @@
+# Northstar Lantern Catalog
+
+> A fictional catalog of imaginary lantern examples.
+
+## Pages
+
+- [Catalog](https://northstar-lantern.example/catalog): Materials and intended settings

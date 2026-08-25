@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Build a paper lantern",
+  "url": "https://northstar-lantern.example/courses/paper-lantern",
+  "description": "A fictional beginner course about building one paper lantern.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Northstar Lantern Works",
+    "url": "https://northstar-lantern.example"
+  }
+}

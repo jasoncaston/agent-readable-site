@@ -1,0 +1,7 @@
+# Northstar Lantern Works
+
+> A fictional workshop that publishes lantern plans for imaginary night markets.
+
+## Pages
+
+- [Home](https://northstar-lantern.example/): Workshop purpose and published planning notes

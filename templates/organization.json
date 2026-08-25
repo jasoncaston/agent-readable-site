@@ -1,0 +1,8 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Northstar Lantern Works",
+  "url": "https://northstar-lantern.example",
+  "description": "A fictional workshop that designs lanterns for imaginary night markets.",
+  "logo": "https://northstar-lantern.example/images/logo.png"
+}

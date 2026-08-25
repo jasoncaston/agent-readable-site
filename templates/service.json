@@ -1,0 +1,13 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Night market lantern planning",
+  "url": "https://northstar-lantern.example/services/market-planning",
+  "description": "A fictional planning service for lighting an imaginary night market.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Northstar Lantern Works",
+    "url": "https://northstar-lantern.example"
+  },
+  "areaServed": "Fictional Harbor District"
+}
